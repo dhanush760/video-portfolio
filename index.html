@@ -1,45 +1,123 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Dhanush Portfolio</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#0b1026;
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 40px;
+}
+
+nav a{
+    margin-left:20px;
+    color:white;
+    text-decoration:none;
+}
+
+.hero{
+    text-align:center;
+    margin-top:60px;
+}
+
+.hero h1{
+    font-size:48px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    padding:60px;
+}
+
+.card{
+    background:#141a40;
+    border-radius:15px;
+    padding:15px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card img{
+    width:100%;
+    border-radius:10px;
+}
+
+.skills{
+    text-align:center;
+    padding:40px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    opacity:0.7;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-    <h2>itsDhanush</h2>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Skills</a>
-        <a href="#">Contact</a>
-    </nav>
+<h2>itsDhanush</h2>
+<nav>
+<a href="#">Home</a>
+<a href="#">Projects</a>
+<a href="#">Skills</a>
+<a href="#">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-    <h1>My Video Projects</h1>
-    <p>From smooth transitions to dynamic animations — I make content powerful.</p>
+<h1>My Video Projects</h1>
+<p>I create smooth transitions, motion graphics and cinematic edits.</p>
 </section>
 
 <section class="projects">
 
-    <div class="card">
-        <img src="https://via.placeholder.com/300">
-        <h3>Explainer Video</h3>
-    </div>
+<div class="card">
+<img src="https://via.placeholder.com/400">
+<h3>Explainer Video</h3>
+</div>
 
-    <div class="card">
-        <img src="https://via.placeholder.com/300">
-        <h3>Promo Video</h3>
-    </div>
+<div class="card">
+<img src="https://via.placeholder.com/400">
+<h3>Promo Video</h3>
+</div>
 
-    <div class="card">
-        <img src="https://via.placeholder.com/300">
-        <h3>Short Form Edit</h3>
-    </div>
+<div class="card">
+<img src="https://via.placeholder.com/400">
+<h3>Short Form Edit</h3>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/400">
+<h3>Documentary Edit</h3>
+</div>
 
 </section>
+
+<section class="skills">
+<h2>Skills</h2>
+<p>Premiere Pro • After Effects • Motion Graphics • Color Grading • Sound Sync</p>
+</section>
+
+<footer>
+© 2026 Dhanush Portfolio
+</footer>
 
 </body>
 </html>
