@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Dhanush Portfolio</title>
+<title>Dhanush Video Portfolio</title>
 
 <style>
 body{
@@ -20,17 +20,28 @@ header{
 
 nav a{
     margin-left:20px;
-    color:white;
     text-decoration:none;
+    color:white;
 }
 
 .hero{
     text-align:center;
-    margin-top:60px;
+    margin-top:50px;
 }
 
-.hero h1{
-    font-size:48px;
+.filters{
+    text-align:center;
+    margin-top:30px;
+}
+
+.filters button{
+    padding:10px 20px;
+    margin:10px;
+    border:none;
+    border-radius:20px;
+    background:#1c2260;
+    color:white;
+    cursor:pointer;
 }
 
 .projects{
@@ -56,17 +67,21 @@ nav a{
     border-radius:10px;
 }
 
-.skills{
-    text-align:center;
-    padding:40px;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    opacity:0.7;
-}
 </style>
+
+<script>
+function filterSelection(category){
+    let cards = document.getElementsByClassName("card");
+    for(let i=0;i<cards.length;i++){
+        if(category=="all" || cards[i].classList.contains(category)){
+            cards[i].style.display="block";
+        }else{
+            cards[i].style.display="none";
+        }
+    }
+}
+</script>
+
 </head>
 
 <body>
@@ -83,41 +98,39 @@ footer{
 
 <section class="hero">
 <h1>My Video Projects</h1>
-<p>I create smooth transitions, motion graphics and cinematic edits.</p>
+<p>Professional motion graphics, reels and promo edits.</p>
 </section>
+
+<div class="filters">
+<button onclick="filterSelection('all')">All</button>
+<button onclick="filterSelection('motion')">Motion Graphics</button>
+<button onclick="filterSelection('short')">Short Form</button>
+<button onclick="filterSelection('promo')">Promo</button>
+</div>
 
 <section class="projects">
 
-<div class="card">
+<div class="card motion">
 <img src="https://via.placeholder.com/400">
-<h3>Explainer Video</h3>
+<h3>Motion Graphics Ad</h3>
 </div>
 
-<div class="card">
+<div class="card short">
+<img src="https://via.placeholder.com/400">
+<h3>Instagram Reel Edit</h3>
+</div>
+
+<div class="card promo">
 <img src="https://via.placeholder.com/400">
 <h3>Promo Video</h3>
 </div>
 
-<div class="card">
+<div class="card motion">
 <img src="https://via.placeholder.com/400">
-<h3>Short Form Edit</h3>
-</div>
-
-<div class="card">
-<img src="https://via.placeholder.com/400">
-<h3>Documentary Edit</h3>
+<h3>App Animation</h3>
 </div>
 
 </section>
-
-<section class="skills">
-<h2>Skills</h2>
-<p>Premiere Pro • After Effects • Motion Graphics • Color Grading • Sound Sync</p>
-</section>
-
-<footer>
-© 2026 Dhanush Portfolio
-</footer>
 
 </body>
 </html>
