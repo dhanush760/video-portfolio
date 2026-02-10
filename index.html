@@ -42,21 +42,6 @@ nav a{
     text-decoration:none;
 }
 
-.filters{
-    text-align:center;
-    margin-top:40px;
-}
-
-.filters button{
-    padding:10px 20px;
-    margin:8px;
-    border:none;
-    border-radius:20px;
-    background:#1d4ed8;
-    color:white;
-    cursor:pointer;
-}
-
 .projects{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -104,17 +89,6 @@ nav a{
 </style>
 
 <script>
-function filterSelection(category){
-    let cards = document.getElementsByClassName("card");
-    for(let i=0;i<cards.length;i++){
-        if(category=="all" || cards[i].classList.contains(category)){
-            cards[i].style.display="block";
-        }else{
-            cards[i].style.display="none";
-        }
-    }
-}
-
 function openVideo(link){
     document.getElementById("popup").style.display="flex";
     document.getElementById("videoFrame").src=link;
@@ -149,28 +123,11 @@ function closeVideo(){
 </div>
 </section>
 
-<div class="filters">
-<button onclick="filterSelection('all')">All</button>
-<button onclick="filterSelection('motion')">Motion</button>
-<button onclick="filterSelection('short')">Short</button>
-<button onclick="filterSelection('promo')">Promo</button>
-</div>
-
 <section class="projects">
 
-<div class="card motion" onclick="openVideo('https://youtu.be/__QqMvv6lSc')">
-<img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg">
-<h3>Motion Graphics Ad</h3>
-</div>
-
-<div class="card short" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-<img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg">
-<h3>Instagram Reel</h3>
-</div>
-
-<div class="card promo" onclick="openVideo('https://www.youtube.com/embed/dQw4w9WgXcQ')">
-<img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg">
-<h3>Promo Video</h3>
+<div class="card" onclick="openVideo('https://www.youtube.com/embed/__QqMvv6lSc')">
+<img src="https://img.youtube.com/vi/__QqMvv6lSc/maxresdefault.jpg">
+<h3>Educational Explainer Video</h3>
 </div>
 
 </section>
@@ -182,4 +139,3 @@ function closeVideo(){
 
 </body>
 </html>
-
